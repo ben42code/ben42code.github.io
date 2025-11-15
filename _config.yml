@@ -1,2 +1,10 @@
-theme: jekyll-theme-minimal
-title: Ben42Code Homepage
+theme: minima
+title: Homepage
+
+repository: ben42code/ben42code.github.io
+baseurl: "/blog"
+github_username: ben42code
+
+author: Ben42Code
+email: ben.42.code+githubio@gmail.com
+description: Personal blog and portfolio of Ben42Code.
