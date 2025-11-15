@@ -2,7 +2,6 @@ theme: minima
 title: Homepage
 
 repository: ben42code/ben42code.github.io
-baseurl: "/blog"
 github_username: ben42code
 
 author: Ben42Code
