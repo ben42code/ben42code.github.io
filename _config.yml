@@ -7,3 +7,6 @@ github_username: ben42code
 author: Ben42Code
 email: ben.42.code+githubio@gmail.com
 description: Personal blog and portfolio of Ben42Code.
+
+exclude:
+  - Dockerfile
