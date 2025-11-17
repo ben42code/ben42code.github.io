@@ -14,3 +14,5 @@ exclude:
 collections:
   mypages:
     output: true
+
+google_analytics: G-SMMZN59NRR
