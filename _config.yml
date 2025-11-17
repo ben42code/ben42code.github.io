@@ -1,8 +1,14 @@
-theme: minima
+
+# Targeting minima theme version in '2.5-stable' branch including the google-analytics.html fix/update.
+remote_theme: jekyll/minima@593a05a2a6426b2f2438e334abf8c8edc80d4624
+
 title: Homepage
 
 repository: ben42code/ben42code.github.io
 github_username: ben42code
+
+plugins:
+  - jekyll-remote-theme
 
 author: Ben42Code
 email: ben.42.code+githubio@gmail.com
