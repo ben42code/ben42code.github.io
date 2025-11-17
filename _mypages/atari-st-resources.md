@@ -32,6 +32,7 @@ title: Atari ST resources
 - <http://www.shlock.co.uk/Utils/OmniFlop/OmniFlop.htm> - Floppy Disk Transfer - OmniFlop
 - <https://wiki.archiveteam.org/index.php/Rescuing_Floppy_Disks> - Rescuing Floppy Disks
 - <https://info-coach.fr/atari/hardware/FD-Hard.php> - Atari ST Floppy Disks from a "Hardware point of view"
+- <https://info-coach.fr/atari/software/Images-formats.php> - Atari ST Floppy Disks image's formats
 - <https://info-coach.fr/atari/hardware/_fd-hard/floppy-ug.pdf> - The floppy user guide
 
 # Screen SC1224
