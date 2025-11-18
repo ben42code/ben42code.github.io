@@ -9,6 +9,7 @@ github_username: ben42code
 
 plugins:
   - jekyll-remote-theme
+  - jekyll-sitemap
 
 author: Ben42Code
 email: ben.42.code+githubio@gmail.com
