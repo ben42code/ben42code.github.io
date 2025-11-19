@@ -27,3 +27,4 @@ collections:
 google_analytics: G-SMMZN59NRR
 
 show_excerpts: true
+strict_front_matter: true
