@@ -93,6 +93,10 @@ RUN apt-get -y install git \
     libdb-dev \
     apt-utils
 
+# Required to avoid locale-related errors.
+# Jekyll/Ruby was parsing file expecting an US-ASCII encoding instead of en_US.UTF-8.
+RUN apt-get -y install language-pack-en
+
 #################################################
 # "GitHub Pages/Jekyll is based on Ruby. Set the version and path"
 # "As of this writing, use Ruby 3.3.4
