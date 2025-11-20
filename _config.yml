@@ -1,6 +1,6 @@
 
 # Targeting minima theme version in '2.5-stable' branch including the google-analytics.html fix/update.
-remote_theme: jekyll/minima@cc7d230
+remote_theme: jekyll/minima@478d99d
 
 title: Ben42Code's Blog
 tagline: Sharing my journey in coding and technology
