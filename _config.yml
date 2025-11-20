@@ -1,7 +1,6 @@
 
 # Targeting minima theme version in '2.5-stable' branch including the google-analytics.html fix/update.
-# TEMP: test to confirm regression with commit from @cc7d230 to @478d99d
-remote_theme: jekyll/minima@cc7d230
+remote_theme: jekyll/minima@593a05a2a6426b2f2438e334abf8c8edc80d4624
 
 title: Ben42Code's Blog
 tagline: Sharing my journey in coding and technology
