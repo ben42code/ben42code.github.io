@@ -37,3 +37,6 @@ google_analytics: G-SMMZN59NRR
 
 show_excerpts: true
 strict_front_matter: true
+
+disqus:
+  shortname: ben42code-githubio
