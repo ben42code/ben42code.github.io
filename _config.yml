@@ -14,6 +14,7 @@ minima:
     - title: Ben42Code at GitHub
       icon: github
       url: "https://github.com/ben42code"
+  show_excerpts: true
 
 plugins:
   - jekyll-remote-theme
