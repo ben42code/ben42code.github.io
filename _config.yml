@@ -9,8 +9,11 @@ title: Ben42Code's Blog
 tagline: Sharing my journey in coding and technology
 description: Personal blog and portfolio of Ben42Code
 
-repository: ben42code/ben42code.github.io
-github_username: ben42code
+minima:
+  social_links:
+    - title: Ben42Code at GitHub
+      icon: github
+      url: "https://github.com/ben42code"
 
 plugins:
   - jekyll-remote-theme
@@ -18,8 +21,9 @@ plugins:
   - jekyll-sitemap
   - jekyll-seo-tag
 
-author: Ben42Code
-email: ben.42.code+githubio@gmail.com
+author:
+  name: Ben42Code
+  email: ben.42.code+githubio@gmail.com
 
 exclude:
   - Dockerfile
