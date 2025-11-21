@@ -55,7 +55,6 @@ The culprit was in [`_sass/minima/_layout.scss`](https://github.com/jekyll/minim
       padding-inline: 5px;
     }
 ```
-# Root Cause Analysis
 
 The [`•` character](https://en.wikipedia.org/wiki/Bullet_(typography)) is a bullet symbol with [Unicode value `U+2022`](https://www.compart.com/fr/unicode/U+2022). Its UTF-8 encoding is the byte sequence `0xE2 0x80 0xA2`. This directly correlates with the build error message: *"Invalid US-ASCII character "\xE2"*. Jekyll was attempting to parse the file as `US-ASCII` instead of UTF-8.
 
