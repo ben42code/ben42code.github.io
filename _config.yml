@@ -15,6 +15,10 @@ minima:
       icon: github
       url: "https://github.com/ben42code"
   show_excerpts: true
+  date_format: "%Y-%m-%d"
+  nav_pages:
+    - resources.md
+    - about.md
 
 plugins:
   - jekyll-remote-theme
