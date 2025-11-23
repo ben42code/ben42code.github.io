@@ -2,15 +2,19 @@
 layout: post
 title: "Jekyll - Invalid US-ASCII character '\\xE2'"
 date: 2025-11-20 00:00:00 +0000
+last_modified_at: 2025-11-23 00:00:00 +0000
 author: Ben42Code
-excerpt: UTF8 encoding issues when switching to `minima@main` branch.
+excerpt: UTF-8 encoding issues when switching to `minima@main` branch.
 ---
+
+* Table of content
+{:toc}
 
 # Context
 
 I've been using the [`2.5-stable`](https://github.com/jekyll/minima/tree/2.5-stable) branch of the `jekyll/minima` theme without issues. However, I recently wanted to customize the `<head/>` section of my site. The [`master`](https://github.com/jekyll/minima/tree/master) branch provides [`_includes/custom-head.html`](https://github.com/jekyll/minima/blob/8d0aa75ec81ceac98c90fd4539ddab500d936d00/README.md#extending-the-head-) for this purpose, but this feature isn't available in the stable branch.
 
-# Path to failure
+# Attempting the Upgrade
 
 I had two options:
 1. Submit a pull request to backport the custom head feature to the [`2.5-stable`](https://github.com/jekyll/minima/tree/2.5-stable) branch
@@ -54,6 +58,7 @@ The culprit was in [`_sass/minima/_layout.scss`](https://github.com/jekyll/minim
       content: "•";
       padding-inline: 5px;
     }
+  }
 ```
 
 The [`•` character](https://en.wikipedia.org/wiki/Bullet_(typography)) is a bullet symbol with [Unicode value `U+2022`](https://www.compart.com/fr/unicode/U+2022). Its UTF-8 encoding is the byte sequence `0xE2 0x80 0xA2`. This directly correlates with the build error message: *"Invalid US-ASCII character "\xE2"*. Jekyll was attempting to parse the file as `US-ASCII` instead of UTF-8.
@@ -71,7 +76,7 @@ The solution was to configure the Docker container's locale settings. Following 
 RUN apt-get -y install language-pack-en
 ```
 
-This ensures Ruby/Jekyll correctly detects UTF-8 encoding. After rebuilding the container, the build succeeded🎉✅:
+This ensures Ruby/Jekyll correctly detect UTF-8 encoding. After rebuilding the container, the build succeeded🎉✅:
 
 ```shell
       Remote Theme: Using theme jekyll/minima
