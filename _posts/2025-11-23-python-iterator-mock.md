@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Python - Mocking Iterators and Iterables"
-date: 2025-11-21 00:00:00 +0000
+date: 2025-11-23 00:00:00 +0000
 author: Ben42Code
 excerpt: More complex than initially anticipated.
 ---
