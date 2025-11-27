@@ -1,6 +1,6 @@
 #################################################
 # Dockerfile to build a GitHub Pages Jekyll site
-#   - Ubuntu 22.04
+#   - Ubuntu 24.04
 #   - Ruby 3.3.4
 #   - Jekyll 3.10.0
 #   - GitHub Pages 232
@@ -67,15 +67,15 @@
 FROM ubuntu:24.04
 
 #################################################
-# "Get the latest APT packages"
-# "apt-get update"
+# Get the latest APT packages
+# apt-get update
 #################################################
 RUN apt-get update
 
 #################################################
-# "Install Ubuntu prerequisites for Ruby and GitHub Pages (Jekyll)"
+# Install Ubuntu prerequisites for Ruby and GitHub Pages (Jekyll)
 # Copy-pasted from: https://gist.github.com/BillRaymond/db761d6b53dc4a237b095819d33c7332
-# "Partially based on https://gist.github.com/jhonnymoreira/777555ea809fd2f7c2ddf71540090526"
+# Partially based on https://gist.github.com/jhonnymoreira/777555ea809fd2f7c2ddf71540090526
 #################################################
 RUN apt-get -y install git \
     curl \
@@ -93,20 +93,21 @@ RUN apt-get -y install git \
     libdb-dev \
     apt-utils
 
+#################################################
 # Required to avoid locale-related errors.
 # Jekyll/Ruby was parsing file expecting an US-ASCII encoding instead of en_US.UTF-8.
+#################################################
 RUN apt-get -y install language-pack-en
 
 #################################################
-# "GitHub Pages/Jekyll is based on Ruby. Set the version and path"
-# "As of this writing, use Ruby 3.3.4
+# GitHub Pages/Jekyll is based on Ruby. Set the version and path
 #################################################
 ENV RBENV_ROOT /usr/local/src/rbenv
 ENV RUBY_VERSION 3.3.4
 ENV PATH ${RBENV_ROOT}/bin:${RBENV_ROOT}/shims:$PATH
 
-# "#################################################"
-# "Install rbenv to manage Ruby versions"
+##################################################
+# Install rbenv to manage Ruby versions
 #################################################
 RUN git clone https://github.com/rbenv/rbenv.git ${RBENV_ROOT} \
   && git clone https://github.com/rbenv/ruby-build.git \
@@ -115,17 +116,16 @@ RUN git clone https://github.com/rbenv/rbenv.git ${RBENV_ROOT} \
   && echo 'eval "$(rbenv init -)"' >> /etc/profile.d/rbenv.sh
 
 #################################################
-# "Install ruby and set the global version"
+# Install ruby and set the global version
 #################################################
 RUN rbenv install ${RUBY_VERSION} \
   && rbenv global ${RUBY_VERSION}
 
 #################################################
-# "Install the version of Jekyll that GitHub Pages supports"
-# "Based on:  "
-# "Note: If you always want the latest 3.10.x version,"
-# "       use this line instead:"
-# "       RUN gem install jekyll -v '~>3.10'"
+# Install the version of Jekyll that GitHub Pages supports
+# Note: If you always want the latest 3.10.x version,
+#        use this line instead:
+#        RUN gem install jekyll -v '~>3.10'
 #################################################
 
 RUN gem install jekyll -v '3.10.0'
