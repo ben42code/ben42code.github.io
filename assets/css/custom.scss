@@ -1,0 +1,37 @@
+---
+---
+/* Custom CSS overrides */
+
+.wrapper {
+  max-width: 100%;
+}
+
+{% assign shadow_rgb_light = '0,0,0' %}
+{% assign shadow_rgb_dark = '255,255,255' %}
+
+{% if site.minima.skin == 'auto' %}
+:root {
+  --shadow-rgb: {{ shadow_rgb_light }};
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --shadow-rgb: {{ shadow_rgb_dark }};
+  }
+}
+{% elsif site.minima.skin == 'dark' %}
+:root {
+  --shadow-rgb: {{ shadow_rgb_dark }};
+}
+{% else %}
+:root {
+  --shadow-rgb: {{ shadow_rgb_light }};
+}
+{% endif %}
+
+.shadowed_image {
+  border-radius: 5px;
+  border: 1px solid rgb(var(--shadow-rgb));
+  box-shadow: 5px 5px 3px 0px rgba(var(--shadow-rgb), 0.3);
+}
+
