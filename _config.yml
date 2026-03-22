@@ -39,7 +39,10 @@ collections:
     output: true
 
 google_analytics: G-SMMZN59NRR
-google_site_verification: IOVkhhqOpWG8s7nQ_KyTdIfEdkiCf3Cx691yG_TyneM
+
+webmaster_verifications:
+  google: IOVkhhqOpWG8s7nQ_KyTdIfEdkiCf3Cx691yG_TyneM
+  bing: B0545168D4A7840D99A1C1413012AD4B
 
 show_excerpts: true
 strict_front_matter: true
