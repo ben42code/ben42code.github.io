@@ -4,6 +4,7 @@ title: "Fix Google Analytics on my Github pages"
 date: 2025-11-18 00:00:00 +0000
 author: Ben42Code
 excerpt: How did I unblock Google Analytics for my Github pages with `jekyll/minima` theme.
+description: "Fix broken Google Analytics on GitHub Pages with jekyll/minima theme by switching to jekyll-remote-theme and targeting the updated google-analytics.html"
 ---
 Adding Google Analytics to a [Jekyll](https://jekyllrb.com/) site with [`jekyll/minima`](https://github.com/jekyll/minima) theme is supposed to be straight forward. Just a single line in your [_config.yml](https://jekyllrb.com/docs/configuration/) file.
 

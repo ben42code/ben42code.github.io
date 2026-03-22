@@ -5,6 +5,7 @@ date: 2025-11-20 00:00:00 +0000
 last_modified_at: 2025-11-23 00:00:00 +0000
 author: Ben42Code
 excerpt: UTF-8 encoding issues when switching to `minima@main` branch.
+description: "Resolve Jekyll SCSS build error 'Invalid US-ASCII character xE2' caused by missing UTF-8 locale in a Docker container"
 ---
 
 * Table of content
