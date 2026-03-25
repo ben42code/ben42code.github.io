@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ben42code.github.io/sitemap.xml
